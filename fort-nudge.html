@@ -56,7 +56,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       z-index: 1;
     }
 
-    :host(:not([count="0"]),:not([count=""])):host-context([state="0"]:not([is-open])) {
+    :host(:not([count="0"]):not([count=""])):host-context([state="0"]:not([is-open])) {
       background: var(--nudge-color);
       animation-iteration-count: infinite;
       animation-duration: 1.5s;
@@ -68,7 +68,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.2);
     }
 
-    :host([init]:not([count="0"]),[init]:not([count=""])):host-context([state="0"]:not([is-open])) {
+    :host([init]:not([count="0"]):not([count=""])):host-context([state="0"]:not([is-open])) {
       animation-iteration-count: 1;
       animation-duration: 1s;
       animation-delay: var(--nudge-delay);
@@ -77,7 +77,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       animation-fill-mode: forwards;
     }
 
-    :host(:not([count="0"]),:not([count=""])):host-context([state="1"],[state="2"],[is-open]) #badge {
+    :host(:not([count="0"]):not([count=""])):host-context([state="1"],[state="2"],[is-open]) #badge {
       display: block;
       background: var(--nudge-color);
     }
