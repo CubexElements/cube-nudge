@@ -21,18 +21,18 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     }
 
     :host:nth-child(1) {
-      --popper-color: red;
-      --popper-delay: 0s;
+      --nudge-color: red;
+      --nudge-delay: 0s;
     }
 
     :host:nth-child(2) {
-      --popper-color: green;
-      --popper-delay: 0.1s;
+      --nudge-color: green;
+      --nudge-delay: 0.1s;
     }
 
     :host:nth-child(3) {
-      --popper-color: rebeccapurple;
-      --popper-delay: 0.2s;
+      --nudge-color: rebeccapurple;
+      --nudge-delay: 0.2s;
     }
 
     :host(:hover):host-context([state="0"]:not([is-open])) {
@@ -57,7 +57,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     }
 
     :host(:not([count="0"]),:not([count=""])):host-context([state="0"]:not([is-open])) {
-      background: var(--popper-color);
+      background: var(--nudge-color);
       animation-iteration-count: infinite;
       animation-duration: 1.5s;
       animation-delay: 0s;
@@ -71,7 +71,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     :host([init]:not([count="0"]),[init]:not([count=""])):host-context([state="0"]:not([is-open])) {
       animation-iteration-count: 1;
       animation-duration: 1s;
-      animation-delay: var(--popper-delay);
+      animation-delay: var(--nudge-delay);
       animation-name: start-bounce;
       animation-timing-function: ease-in-out;
       animation-fill-mode: forwards;
@@ -79,7 +79,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     :host(:not([count="0"]),:not([count=""])):host-context([state="1"],[state="2"],[is-open]) #badge {
       display: block;
-      background: var(--popper-color);
+      background: var(--nudge-color);
     }
 
     @keyframes start-bounce {
@@ -119,7 +119,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <script>
     Polymer(
       {
-        is:         'fort-popper',
+        is:         'fort-nudge',
         properties: {
           count: {type: Number, reflectToAttribute: true},
           init:  {type: Number, value: true, reflectToAttribute: true}
