@@ -10,7 +10,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 <link rel="import" href="../polymer/polymer.html">
 
-<dom-module id="fort-nudge" attributes="count">
+<dom-module id="fort-nudge" attributes="count init">
   <template>
     <style>
       :host {
@@ -116,7 +116,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     </style>
 
     <div id="badge">[[count]]</div>
-    <content></content>
+    <slot></slot>
   </template>
   <script>
     Polymer(

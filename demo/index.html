@@ -4,36 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
     <title>fort-nudge Demo</title>
-    <script src="../../webcomponentsjs/webcomponents-lite.min.js"></script>
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
     <link rel="import" href="../fort-nudge.html">
   </head>
   <body unresolved>
 
-    <p>An example of <code>&lt;fort-nudge&gt;</code>:</p>
-
-    <p>Make words! <button id="saybtn">Say Something</button></p>
-    <p>Make lasers! <button id="laserbtn">Fire lasers</button></p>
-
-    <fort-nudge author='{"name": "Lord Meowser", "image": "http://lorempixel.com/g/300/200/cats/"}' fancy>
+    <fort-nudge count="2">
       <h2>Hello fort-nudge</h2>
     </fort-nudge>
-
-    <script>
-      var seedElement = document.querySelector('fort-nudge');
-
-      document.querySelector('#saybtn').addEventListener('click', function() {
-        alert(seedElement.sayHello('Hallo!'));
-      });
-
-      document.querySelector('#laserbtn').addEventListener('click', function() {
-        seedElement.fireLasers();
-      });
-
-      document.addEventListener("fort-nudge-lasers", function(e) {
-        console.log(e.detail.sound);
-      });
-
-    </script>
 
   </body>
 </html>
