@@ -21,17 +21,17 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         transition: all ease 1s;
       }
 
-      :host:nth-child(1) {
+      :host(:nth-child(1)) {
         --nudge-color: red;
         --nudge-delay: 0s;
       }
 
-      :host:nth-child(2) {
+      :host(:nth-child(2)) {
         --nudge-color: green;
         --nudge-delay: 0.1s;
       }
 
-      :host:nth-child(3) {
+      :host(:nth-child(3)) {
         --nudge-color: rebeccapurple;
         --nudge-delay: 0.2s;
       }
@@ -128,7 +128,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         },
         attached:       function ()
                         {
-                          this.listen(window, 'drawer-state-changed', '_drawerChanged');
+                          this.listen(window, 'fortifi-drawer-state-changed', '_drawerChanged');
                           this.listen(this, 'animationend', '_animEnd');
                         },
         _drawerChanged: function (e)
