@@ -9,6 +9,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 -->
 
 <link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../paper-styles/color.html">
 
 <dom-module id="fort-nudge" attributes="count init">
   <template>
@@ -19,21 +20,58 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         left: 0;
         width: 56px;
         transition: all ease 1s;
+        --nudge-color: var(--paper-red-500);
+        --nudge-delay: 100ms;
       }
 
       :host(:nth-child(1)) {
-        --nudge-color: red;
-        --nudge-delay: 0s;
+        --nudge-color: var(--paper-red-500);
+        --nudge-delay: 100ms;
       }
 
       :host(:nth-child(2)) {
-        --nudge-color: green;
-        --nudge-delay: 0.1s;
+        --nudge-color: var(--paper-light-green-500);
+        --nudge-delay: 200ms;
       }
 
       :host(:nth-child(3)) {
-        --nudge-color: rebeccapurple;
-        --nudge-delay: 0.2s;
+        --nudge-color: var(--paper-cyan-500);
+        --nudge-delay: 300ms;
+      }
+
+      :host(:nth-child(4)) {
+        --nudge-color: var(--paper-orange-500);
+        --nudge-delay: 400ms;
+      }
+
+      :host(:nth-child(5)) {
+        --nudge-color: var(--paper-pink-500);
+        --nudge-delay: 500ms;
+      }
+
+      :host(:nth-child(6)) {
+        --nudge-color: var(--paper-teal-500);
+        --nudge-delay: 600ms;
+      }
+
+      :host(:nth-child(7)) {
+        --nudge-color: var(--paper-deep-orange-500);
+        --nudge-delay: 700ms;
+      }
+
+      :host(:nth-child(8)) {
+        --nudge-color: var(--paper-purple-500);
+        --nudge-delay: 800ms;
+      }
+
+      :host(:nth-child(9)) {
+        --nudge-color: var(--paper-amber-500);
+        --nudge-delay: 900ms;
+      }
+
+      :host(:nth-child(10)) {
+        --nudge-color: var(--paper-deep-purple-500);
+        --nudge-delay: 1000ms;
       }
 
       :host(:hover):host-context([state="0"]:not([is-open])) {
