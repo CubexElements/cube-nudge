@@ -11,7 +11,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../polymer/polymer.html">
 <link rel="import" href="../paper-styles/color.html">
 
-<dom-module id="fort-nudge" attributes="count init">
+<dom-module id="cube-nudge" attributes="count init">
   <template>
     <style>
       :host {
@@ -159,14 +159,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <script>
     Polymer(
       {
-        is:             'fort-nudge',
+        is:             'cube-nudge',
         properties:     {
           count: {type: Number, reflectToAttribute: true},
           init:  {type: Number, value: true, reflectToAttribute: true}
         },
         attached:       function ()
                         {
-                          this.listen(window, 'fortifi-drawer-state-changed', '_drawerChanged');
+                          this.listen(window, 'cubex-drawer-state-changed', '_drawerChanged');
                           this.listen(this, 'animationend', '_animEnd');
                         },
         _drawerChanged: function (e)
